@@ -5,24 +5,30 @@ import { Container, Row, Col } from "react-bootstrap";
 const navItems = [
    {
       label: "Home",
-      data: "home",
+      data: "/",
    },
    {
       label: "Servizi",
-      data: "servizi",
+      data: "/servizi",
    },
    {
       label: "Realizzazioni",
-      data: "realizzazioni",
+      data: "/realizzazioni",
    },
    {
       label: "Contattaci",
-      data: "contattaci",
+      data: "/contattaci",
    },
 ];
 
 const TopbarDesktop = () => {
-   const NavItem = ({ label }) => <Col><h4>{label}</h4></Col>
+   const NavItem = ({ label, data }) => (
+      <Col>
+         <h4>
+            <a href={`${data}`}>{label}</a>
+         </h4>
+      </Col>
+   )
 
    return (
       <div className={`${styles.topbar} ${styles.desktop} align-items-center d-none d-lg-flex`}>
@@ -34,7 +40,7 @@ const TopbarDesktop = () => {
                {/* Nav Area */}
                <Col lg={5}>
                   <Row>
-                     {navItems.map(({ label }) => <NavItem label={label} />)}
+                     {navItems.map(data => <NavItem {...data} />)}
                   </Row>
                </Col>
             </Row>
