@@ -16,8 +16,8 @@ const navItems = [
       data: "/realizzazioni",
    },
    {
-      label: "Contattaci",
-      data: "/contattaci",
+      label: "Contatti",
+      data: "/contatti",
    },
 ];
 
@@ -37,10 +37,10 @@ const TopbarDesktop = () => {
          <Container>
             <Row className="justify-content-between align-items-center">
                {/* Logo Area */}
-               <Col lg="auto"><h1><HomeButton /></h1></Col>
+               <Col lg="auto"><h4><HomeButton /></h4></Col>
 
                {/* Nav Area */}
-               <Col lg={5}>
+               <Col lg={6}>
                   <Row>
                      {navItems.map(data => <NavItem {...data} />)}
                   </Row>
