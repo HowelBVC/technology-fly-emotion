@@ -1,3 +1,12 @@
 .topbar {
-   background-color: black;
+   background-color: #060527;
+   color: white;
+}
+
+.desktop {
+   height: 160px;
+}
+
+.mobile {
+   height: 48px;
 }
