@@ -12,6 +12,10 @@ a:hover {
    color: #FFCE84
 }
 
+.home:hover {
+   color: white;
+}
+
 .desktop {
    height: 160px;
 }

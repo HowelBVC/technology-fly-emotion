@@ -21,6 +21,8 @@ const navItems = [
    },
 ];
 
+const HomeButton = () => <a className={styles.home} href="/">Technology Fly Emotion</a>
+
 const TopbarDesktop = () => {
    const NavItem = ({ label, data }) => (
       <Col>
@@ -35,7 +37,7 @@ const TopbarDesktop = () => {
          <Container>
             <Row className="justify-content-between align-items-center">
                {/* Logo Area */}
-               <Col lg="auto"><h1>Technology Fly Emotion</h1></Col>
+               <Col lg="auto"><h1><HomeButton /></h1></Col>
 
                {/* Nav Area */}
                <Col lg={5}>
@@ -49,13 +51,11 @@ const TopbarDesktop = () => {
    )
 }
 
-const TopbarMobile = () => {
-   return (
-      <div className={`${styles.topbar} ${styles.mobile} align-items-center justify-content-center d-flex d-lg-none`}>
-         <h4>Technology Fly Emotion</h4>
-      </div>
-   )
-}
+const TopbarMobile = () => (
+   <div className={`${styles.topbar} ${styles.mobile} align-items-center justify-content-center d-flex d-lg-none`}>
+      <h4><HomeButton /></h4>
+   </div>
+);
 
 export default function Topbar() {
    return (
