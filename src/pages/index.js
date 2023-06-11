@@ -1,13 +1,15 @@
 import * as React from "react"
 import * as styles from "./index.module.css";
-import DesktopWrapper from "../components/wrappers/DesktopWrapper.component";
-import MobileWrapper from "../components/wrappers/MobileWrapper.component";
+import { StaticImage } from "gatsby-plugin-image"
+
 import { Container, Row, Col } from "react-bootstrap";
 
 const BannerDesktop = () => (
-   <DesktopWrapper className={`${styles.bannerDesktop}`}>
-
-   </DesktopWrapper>
+   <section className={`${styles.bannerDesktop} d-none d-lg-block`}>
+      <Container>
+         <StaticImage src="../images/banner.png" alt="Technology Fly Emotion Banner" />
+      </Container>
+   </section>
 );
 
 const BannerMobile = () => (
@@ -35,27 +37,31 @@ const BannerMobile = () => (
 );
 
 const AboutUsDesktop = () => (
-   <DesktopWrapper className={styles.aboutUsDesktop}>
-      <h1>About Us</h1>
-      <p>
-         Fly Emotion nasce nel 2010, lanciando sul mercato la sua prima attrazione - l'Aerofune® - nel luglio del 2011, che riscontra subito grande apprezzamento tra il pubblico (Tripadvisor), anche grazie al volo in coppia che viene reso possibile per la prima volta nel mondo.
-         Sull'onda dell'esperienza maturata nel settore della progettazione e della gestione delle attrazioni, nel 2018 sviluppa e costruisce una nuova giostra outdoor, la Railzip: un percorso alternato su fune e rotaia ad alto contenuto tecnologico.
-      </p>
-      <p>
-         Oggi Fly Emotion si propone sul mercato come partner a tutto tondo, specializzato nel concepimento, sviluppo e realizzazione di attrazioni e nella loro successiva gestione. Operiamo con modelli di business che vanno dalla consulenza sullo sviluppo territoriale, alla fornitura, al sale; lease-back per soddisfare pienamente le diverse esigenze di imprenditori, enti locali e aziende impegnate nel settore turistico.
-      </p>
-   </DesktopWrapper>
+   <section className={`${styles.aboutUsDesktop} d-none d-lg-block`}>
+      <Container>
+         <h1>About Us</h1>
+         <p>
+            Fly Emotion nasce nel 2010, lanciando sul mercato la sua prima attrazione - l'Aerofune® - nel luglio del 2011, che riscontra subito grande apprezzamento tra il pubblico (Tripadvisor), anche grazie al volo in coppia che viene reso possibile per la prima volta nel mondo.
+            Sull'onda dell'esperienza maturata nel settore della progettazione e della gestione delle attrazioni, nel 2018 sviluppa e costruisce una nuova giostra outdoor, la Railzip: un percorso alternato su fune e rotaia ad alto contenuto tecnologico.
+         </p>
+         <p>
+            Oggi Fly Emotion si propone sul mercato come partner a tutto tondo, specializzato nel concepimento, sviluppo e realizzazione di attrazioni e nella loro successiva gestione. Operiamo con modelli di business che vanno dalla consulenza sullo sviluppo territoriale, alla fornitura, al sale; lease-back per soddisfare pienamente le diverse esigenze di imprenditori, enti locali e aziende impegnate nel settore turistico.
+         </p>
+      </Container>
+   </section>
 )
 
-const AboutUsMobile = () => (
-   <MobileWrapper className={styles.aboutUsMobile}>
-      <h1>About Us</h1>
-      <p>
-         Fly Emotion nasce nel 2010, lanciando sul mercato la sua prima attrazione - l'Aerofune® - nel luglio del 2011, che riscontra subito grande apprezzamento tra il pubblico (Tripadvisor), anche grazie al volo in coppia che viene reso possibile per la prima volta nel mondo.
-      </p>
-      <p>Scopri di piu'</p>
-   </MobileWrapper>
-)
+const AboutUsMobile = ({ children }) => (
+   <section className="d-block d-lg-none">
+      <Container className={styles.aboutUsMobile}>
+         <h1>About Us</h1>
+         <p>
+            Fly Emotion nasce nel 2010, lanciando sul mercato la sua prima attrazione - l'Aerofune® - nel luglio del 2011, che riscontra subito grande apprezzamento tra il pubblico (Tripadvisor), anche grazie al volo in coppia che viene reso possibile per la prima volta nel mondo.
+         </p>
+         <p>Scopri di piu'</p>
+      </Container>
+   </section>
+);
 
 export default function MainPage() {
    return (

@@ -42,7 +42,7 @@ const TopbarDesktop = () => {
                {/* Nav Area */}
                <Col lg={6}>
                   <Row>
-                     {navItems.map(data => <NavItem {...data} />)}
+                     {navItems.map((data, index) => <NavItem key={index} {...data} />)}
                   </Row>
                </Col>
             </Row>
