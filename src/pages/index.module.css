@@ -40,3 +40,22 @@
    padding-top: 32px;
    padding-bottom: 32px;
 }
+
+.servizi {
+   padding-top: 64px;
+}
+
+.servizi-row {
+   padding-top: 48px;
+}
+
+.servizi-card {
+   background-color: #FFCE84;
+}
+
+.servizi-card-inner {
+   min-height: 140px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
