@@ -6,14 +6,14 @@ import Servizi from "./components/Servizi.component";
 import Realizzazioni from "./components/Realizzazioni.component";
 
 export default function MainPage({ data }) {
-   return (
-      <React.Fragment>
-         <Banner />
-         <AboutUs />
-         <Servizi data={data} />
-         <Realizzazioni />
-      </React.Fragment>
-   );
+  return (
+    <React.Fragment>
+      <Banner />
+      <AboutUs />
+      <Servizi data={data} />
+      <Realizzazioni data={data} />
+    </React.Fragment>
+  );
 }
 
 export const Head = () => <title>Home Page</title>
@@ -34,6 +34,18 @@ query {
    }
    servizi2: file(relativePath: {eq: "servizi/servizi-2.png"}) {
      ...fluidImage
+   }
+   realizzazioni0: file(relativePath: {eq: "realizzazioni/realizzazioni-0.png"}) {
+    ...fluidImage
+   }
+   realizzazioni1: file(relativePath: {eq: "realizzazioni/realizzazioni-1.png"}) {
+    ...fluidImage
+   }
+   realizzazioni2: file(relativePath: {eq: "realizzazioni/realizzazioni-2.png"}) {
+    ...fluidImage
+   }
+   realizzazioni3: file(relativePath: {eq: "realizzazioni/realizzazioni-3.png"}) {
+    ...fluidImage
    }
  }
 `

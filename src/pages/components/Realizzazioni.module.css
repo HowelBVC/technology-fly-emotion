@@ -1,10 +1,28 @@
+.card {
+   margin-top: 16px;
+   background-color: #FFCE84;
+}
+
+.card-inner {
+   min-height: 140px;
+   display: flex;
+   justify-content: left;
+   align-items: center;
+}
+
 @media (min-width: 768px) {
    .realizzazioni {
       padding-top: 64px;
       padding-bottom: 64px;
    }
 
-   .realizzazioni-card {
+   .card {
       margin-top: 48px;  
+      background-color: white;
+   }
+
+   .card-inner {
+      flex-direction: column;
+      align-items: start;
    }
 }

@@ -1,5 +1,6 @@
 import * as React from "react"
 import * as styles from "./Realizzazioni.module.css";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap";
 
 const dataRealizzazioni = [
@@ -9,35 +10,44 @@ const dataRealizzazioni = [
    { label: "Altre Attrazioni", text: "A seconda delle esigenze, richieste del cliente e peculiarita' del territorio, siamo in grado di progettare attrazioni ad hoc." }
 ]
 
-const CardRealizzazioni = ({ label, text }) => (
-   <Col className={styles.realizzazioniCard}>
+const Card = ({ label, text, image}) => (
+   <Col className={`${styles.card}`}>
       <Row>
          {/* Text Area */}
-         <Col>
+         <Col className={styles.cardInner}>
             <div className="d-flex flex-row" style={{ marginBottom: "16px" }}>
-               <div style={{ height: "72px", width: "8px", backgroundColor: "#FFA51E", marginRight: "20px" }} />
+               <div style={{ height: "72px", width: "8px", backgroundColor: "#FFA51E", marginRight: "20px" }} className="d-none d-md-block"/>
                <h3>{label}</h3>
             </div>
-            <p>{text}</p>
+            <p className="d-none d-md-block">{text}</p>
          </Col>
 
          {/* Image Area */}
-         <Col>
-
+         <Col className="px-0">
+            <GatsbyImage 
+               image={image}
+               alt="Technology Fly Emotion"
+            />
          </Col>
       </Row>
    </Col>
 );
 
-export default function Realizzazioni() {
-   return (
-      <section className={styles.realizzazioni}>
-         <Container className="text-start text-md-center">
-            <h2>Realizzazioni</h2>
-            <Row className="flex-column text-start">
-               {dataRealizzazioni.map((item, index) => <CardRealizzazioni key={index} {...item} />)}
-            </Row>
-         </Container>
-      </section>
-   );
-}
+const Realizzazioni = ({ data }) => (
+   <section className={styles.realizzazioni}>
+      <Container className="text-start text-md-center">
+         <h2>Realizzazioni</h2>
+         <Row className="flex-column text-start px-2 px-md-0">
+            {dataRealizzazioni.map((item, index) => (
+               <Card
+                  key={index}
+                  image={getImage(data[`realizzazioni${index}`].childImageSharp)}
+                  {...item}
+               />
+            ))}
+         </Row>
+      </Container>
+   </section>
+);
+
+export default Realizzazioni;

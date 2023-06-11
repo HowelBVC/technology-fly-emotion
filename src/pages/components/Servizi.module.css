@@ -7,14 +7,14 @@
    padding-top: 16px;
 }
 
-.servizi-card {
+.card {
    background-color: #FFCE84;
 }
 
-.servizi-card-inner {
+.card-inner {
    min-height: 140px;
    display: flex;
-   justify-content: center;
+   justify-content: left;
    align-items: center;
 }
 
@@ -26,5 +26,9 @@
 
    .servizi-row {
       padding-top: 48px;
+   }
+
+   .card-inner {
+      justify-content: center;
    }
 }
