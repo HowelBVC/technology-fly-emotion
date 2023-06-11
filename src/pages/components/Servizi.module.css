@@ -21,6 +21,12 @@
    align-items: center;
 }
 
+.card-image-area {
+   max-width: 130px;
+   height: 164px;
+}
+
+
 @media (min-width: 768px) {
    .servizi {
       padding-top: 64px;
@@ -34,4 +40,9 @@
    .card-inner {
       justify-content: center;
    }
+
+   .card-image-area {
+      max-width: none;
+      height: auto;
+   }   
 }

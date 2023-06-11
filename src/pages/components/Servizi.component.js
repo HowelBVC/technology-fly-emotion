@@ -12,18 +12,18 @@ const cardData = [
 const Card = ({ label, index, image }) => (
    <Col key={index} className={`${styles.card} mx-0 mx-md-2 my-2 my-md-0`}>
       <Row className="flex-row flex-md-column">
-         {/* Image Area */}
-         <Col className="order-1 order-md-0 px-0">
-            <GatsbyImage
-               image={image}
-               alt="Technology Fly Emotion"
-            />
-         </Col>
          {/* Text Area */}
          <Col className={`${styles.cardInner} order-0 order-md-1`}>
             <h4 className="d-none d-md-block">{label}</h4>
             <h3 className="d-block d-md-none">{label}</h3>
          </Col>
+
+         {/* Image Area */}
+         <GatsbyImage
+            image={image}
+            alt="Technology Fly Emotion"
+            className={`${styles.cardImageArea} order-1 order-md-0 px-0`}
+         />
       </Row>
    </Col>
 );
