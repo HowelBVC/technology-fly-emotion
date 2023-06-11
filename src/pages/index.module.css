@@ -1,9 +1,4 @@
-.banner-desktop {
-   background-color: #060527;
-   color: white;
-}
-
-.banner-mobile {
+.banner {
    background-color: #060527;
    color: white;
 }
@@ -29,24 +24,18 @@
    color: black;
 }
 
-.about-us-desktop {
-   background-color: #060527;
-   color: white;
-   padding-top: 64px;
-   padding-bottom: 64px;
-}
-
-.about-us-mobile {
+.about-us {
    padding-top: 32px;
    padding-bottom: 32px;
 }
 
 .servizi {
-   padding-top: 64px;
+   padding-top: 32px;
+   padding-bottom: 32px;
 }
 
 .servizi-row {
-   padding-top: 48px;
+   padding-top: 16px;
 }
 
 .servizi-card {
@@ -58,4 +47,22 @@
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+@media (min-width: 768px) {
+   .about-us {
+      background-color: #060527;
+      color: white;
+      padding-top: 64px;
+      padding-bottom: 64px;
+   }
+
+   .servizi {
+      padding-top: 64px;
+      padding-bottom: 64px;
+   }
+
+   .servizi-row {
+      padding-top: 48px;
+   }
 }

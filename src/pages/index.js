@@ -4,64 +4,49 @@ import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from 'gatsby';
 import { Container, Row, Col } from "react-bootstrap";
 
-const BannerDesktop = () => (
-   <section className={`${styles.bannerDesktop} d-none d-md-block`}>
+const Banner = () => (
+   <section className={styles.banner}>
       <Container>
-         <StaticImage src="../images/banner.png" alt="Technology Fly Emotion Banner" />
-      </Container>
-   </section>
-);
-
-const BannerMobile = () => (
-   <section className={`${styles.bannerMobile} d-block d-md-none`}>
-      <Container>
-         <h1>Technology Fly Emotion</h1>
-         <div className={styles.bannerButtonRow}>
-            <div className={styles.bannerButton}>
-               <p>About Us</p>
-            </div>
-            <div className={styles.bannerButton}>
-               <p>Contattaci</p>
-            </div>
+         <div className="d-none d-md-block">
+            <StaticImage src="../images/banner.png" alt="Technology Fly Emotion Banner" />
          </div>
-         <div className={styles.bannerButtonRow} style={{ marginRight: "36px" }}>
-            <div className={styles.bannerButton}>
-               <p>Servizi</p>
+         <div className="d-block d-md-none">
+            <h1>Technology Fly Emotion</h1>
+            <div className={styles.bannerButtonRow}>
+               <div className={styles.bannerButton}>
+                  <p>About Us</p>
+               </div>
+               <div className={styles.bannerButton}>
+                  <p>Contattaci</p>
+               </div>
             </div>
-            <div className={styles.bannerButton}>
-               <p>Realizzazioni</p>
+            <div className={styles.bannerButtonRow} style={{ marginRight: "36px" }}>
+               <div className={styles.bannerButton}>
+                  <p>Servizi</p>
+               </div>
+               <div className={styles.bannerButton}>
+                  <p>Realizzazioni</p>
+               </div>
             </div>
          </div>
       </Container>
    </section>
 );
 
-const AboutUsDesktop = () => (
-   <section className={`${styles.aboutUsDesktop} d-none d-md-block`}>
+const AboutUs = () => (
+   <section className={styles.aboutUs}>
       <Container>
          <h1>About Us</h1>
          <p>
             Fly Emotion nasce nel 2010, lanciando sul mercato la sua prima attrazione - l'Aerofune® - nel luglio del 2011, che riscontra subito grande apprezzamento tra il pubblico (Tripadvisor), anche grazie al volo in coppia che viene reso possibile per la prima volta nel mondo.
             Sull'onda dell'esperienza maturata nel settore della progettazione e della gestione delle attrazioni, nel 2018 sviluppa e costruisce una nuova giostra outdoor, la Railzip: un percorso alternato su fune e rotaia ad alto contenuto tecnologico.
          </p>
-         <p>
+         <p className="d-none d-md-block">
             Oggi Fly Emotion si propone sul mercato come partner a tutto tondo, specializzato nel concepimento, sviluppo e realizzazione di attrazioni e nella loro successiva gestione. Operiamo con modelli di business che vanno dalla consulenza sullo sviluppo territoriale, alla fornitura, al sale; lease-back per soddisfare pienamente le diverse esigenze di imprenditori, enti locali e aziende impegnate nel settore turistico.
          </p>
       </Container>
    </section>
 )
-
-const AboutUsMobile = ({ children }) => (
-   <section className="d-block d-md-none">
-      <Container className={styles.aboutUsMobile}>
-         <h1>About Us</h1>
-         <p>
-            Fly Emotion nasce nel 2010, lanciando sul mercato la sua prima attrazione - l'Aerofune® - nel luglio del 2011, che riscontra subito grande apprezzamento tra il pubblico (Tripadvisor), anche grazie al volo in coppia che viene reso possibile per la prima volta nel mondo.
-         </p>
-         <p>Scopri di piu'</p>
-      </Container>
-   </section>
-);
 
 const dataServizi = [
    { label: "Ingegneria del territorio" },
@@ -97,14 +82,11 @@ const Servizi = ({ data }) => (
    </section>
 );
 
-
 export default function MainPage({ data }) {
    return (
       <React.Fragment>
-         <BannerDesktop />
-         <BannerMobile />
-         <AboutUsDesktop />
-         <AboutUsMobile />
+         <Banner />
+         <AboutUs />
          <Servizi data={data} />
       </React.Fragment>
    );
