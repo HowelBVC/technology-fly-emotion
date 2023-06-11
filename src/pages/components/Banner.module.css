@@ -1,0 +1,25 @@
+.banner {
+   background-color: #060527;
+   color: white;
+}
+
+.banner-button-row {
+   display: flex;
+   justify-content: end;
+}
+
+.banner-button {
+   height: 115px;
+   width: 115px;
+   background-color: #FFCE84;
+   margin: 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.banner-button p {
+   margin: 0px;
+   padding: 0px;
+   color: black;
+}

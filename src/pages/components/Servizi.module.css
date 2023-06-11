@@ -1,0 +1,30 @@
+.servizi {
+   padding-top: 32px;
+   padding-bottom: 32px;
+}
+
+.servizi-row {
+   padding-top: 16px;
+}
+
+.servizi-card {
+   background-color: #FFCE84;
+}
+
+.servizi-card-inner {
+   min-height: 140px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@media (min-width: 768px) {
+   .servizi {
+      padding-top: 64px;
+      padding-bottom: 64px;
+   }
+
+   .servizi-row {
+      padding-top: 48px;
+   }
+}
