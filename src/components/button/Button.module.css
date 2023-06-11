@@ -1,0 +1,17 @@
+.button {
+   margin: 0px;
+   padding-left: 31px;
+   padding-right: 31px;
+   padding-top: 17px;
+   padding-bottom: 17px;
+   border-radius: 15px;
+   background-color: #FFA51E;
+   display: inline-block;
+}
+
+.button p {
+   margin: 0px;
+   padding: 0px;
+   text-decoration: none;
+   color: black;
+}

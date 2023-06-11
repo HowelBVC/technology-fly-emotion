@@ -9,6 +9,9 @@
 
 .card {
    background-color: #FFCE84;
+   margin-top: 16px;
+   border-radius: 15px;
+   overflow: hidden;
 }
 
 .card-inner {

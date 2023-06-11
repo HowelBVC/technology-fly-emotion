@@ -2,6 +2,7 @@ import * as React from "react"
 import * as styles from "./Realizzazioni.module.css";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap";
+import Button from "../../components/button/Button.component";
 
 const dataRealizzazioni = [
    { label: "Aerofune", text: "Parco avventura con diversi livelli di difficolta' in modo da permettere ad adulti e bambini di divertirsi e trascorrere una giornata nella natura: ponti tibetani, mini zipline, reti per arrampicarsi, un entusiasmante salto di tarzan e tanti altri giochi acrobatici ." },
@@ -10,21 +11,27 @@ const dataRealizzazioni = [
    { label: "Altre Attrazioni", text: "A seconda delle esigenze, richieste del cliente e peculiarita' del territorio, siamo in grado di progettare attrazioni ad hoc." }
 ]
 
-const Card = ({ label, text, image}) => (
+const Card = ({ label, text, image }) => (
    <Col className={`${styles.card}`}>
-      <Row>
+      <Row className="justify-content-between">
          {/* Text Area */}
-         <Col className={styles.cardInner}>
-            <div className="d-flex flex-row" style={{ marginBottom: "16px" }}>
-               <div style={{ height: "72px", width: "8px", backgroundColor: "#FFA51E", marginRight: "20px" }} className="d-none d-md-block"/>
+         <Col xs={6} md={5} className={styles.cardInner}>
+            <h3 className="d-md-block d-md-none">{label}</h3>
+            <div className="d-none d-md-flex flex-row" style={{ marginBottom: "16px" }}>
+               <div style={{ height: "72px", width: "8px", backgroundColor: "#FFA51E", marginRight: "20px" }} className="d-none d-md-block" />
                <h3>{label}</h3>
             </div>
             <p className="d-none d-md-block">{text}</p>
+
+            {/* Button Container */}
+            <div className="w-100 d-none d-md-flex justify-content-end">
+               <Button>Scopri di piu'</Button>
+            </div>
          </Col>
 
          {/* Image Area */}
-         <Col className="px-0">
-            <GatsbyImage 
+         <Col xs={6} md={6} className="px-0">
+            <GatsbyImage
                image={image}
                alt="Technology Fly Emotion"
             />
