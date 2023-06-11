@@ -2,7 +2,7 @@ import * as React from "react"
 import * as styles from "./Realizzazioni.module.css";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "../../components/button/Button.component";
+import Button from "../../button/Button.component";
 
 const dataRealizzazioni = [
    { label: "Aerofune", text: "Parco avventura con diversi livelli di difficolta' in modo da permettere ad adulti e bambini di divertirsi e trascorrere una giornata nella natura: ponti tibetani, mini zipline, reti per arrampicarsi, un entusiasmante salto di tarzan e tanti altri giochi acrobatici ." },

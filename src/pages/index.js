@@ -1,9 +1,9 @@
 import * as React from "react"
 import { graphql } from 'gatsby';
-import Banner from "./components/Banner.component";
-import AboutUs from "./components/AboutUs.component";
-import Servizi from "./components/Servizi.component";
-import Realizzazioni from "./components/Realizzazioni.component";
+import Banner from "../components/pages/index/Banner.component";
+import AboutUs from "../components/pages/index/AboutUs.component";
+import Servizi from "../components/pages/index/Servizi.component";
+import Realizzazioni from "../components/pages/index/Realizzazioni.component";
 
 export default function MainPage({ data }) {
   return (

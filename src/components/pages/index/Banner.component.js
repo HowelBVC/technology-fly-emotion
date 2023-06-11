@@ -2,13 +2,14 @@ import * as React from "react"
 import * as styles from "./Banner.module.css";
 import { StaticImage } from "gatsby-plugin-image"
 import { Container } from "react-bootstrap";
+import BannerImage from "../../../images/Banner.png";
 
 export default function Banner() {
    return (
       <section className={styles.banner}>
          <Container>
             <div className="d-none d-md-block">
-               <StaticImage src="../../images/banner.png" alt="Technology Fly Emotion Banner" />
+               <StaticImage src="../../../images/Banner.png" alt="Technology Fly Emotion Banner" />
             </div>
             <div className="d-block d-md-none">
                <h1>Technology Fly Emotion</h1>
