@@ -1,7 +1,7 @@
 import * as React from "react"
 import * as styles from "./index.module.css";
-import { StaticImage } from "gatsby-plugin-image"
-
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from 'gatsby';
 import { Container, Row, Col } from "react-bootstrap";
 
 const BannerDesktop = () => (
@@ -69,7 +69,7 @@ const dataServizi = [
    { label: "Progettazione integrata" }
 ]
 
-const Servizi = () => (
+const Servizi = ({ data }) => (
    <section className={styles.servizi}>
       <Container className="text-start text-md-center">
          <h2>I Nostri Servizi</h2>
@@ -79,10 +79,9 @@ const Servizi = () => (
                   <Row className="flex-row flex-md-column">
                      {/* Image Area */}
                      <Col className="order-1 order-md-0 px-0">
-                        <StaticImage
-                           src="../images/servizi-0.png"
+                        <GatsbyImage
+                           image={getImage(data.allFile.nodes[index])}
                            alt="Technology Fly Emotion"
-                           placeholder="blurred"
                         />
                      </Col>
                      {/* Text Area */}
@@ -98,16 +97,27 @@ const Servizi = () => (
    </section>
 );
 
-export default function MainPage() {
+
+export default function MainPage({ data }) {
    return (
       <React.Fragment>
          <BannerDesktop />
          <BannerMobile />
          <AboutUsDesktop />
          <AboutUsMobile />
-         <Servizi />
+         <Servizi data={data} />
       </React.Fragment>
    );
 }
 
 export const Head = () => <title>Home Page</title>
+export const imageQuery = graphql`
+query Servizi {
+   allFile(filter: {name: {regex: "/servizi/"}}) {
+     nodes {
+       childImageSharp {
+         gatsbyImageData
+       }
+     }
+   }
+ }`
