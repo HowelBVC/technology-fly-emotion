@@ -17,13 +17,23 @@ export default function MainPage({ data }) {
 }
 
 export const Head = () => <title>Home Page</title>
-export const serviziImagesQuery = graphql`
-query Servizi {
-   allFile(filter: {name: {regex: "/servizi/"}}) {
-     nodes {
-       childImageSharp {
-         gatsbyImageData
-       }
-     }
+export const fluidImage = graphql`
+fragment fluidImage on File {
+   childImageSharp {
+     gatsbyImageData
    }
- }`
+ }`;
+
+export const pageQuery = graphql`
+query {
+   servizi0: file(relativePath: {eq: "servizi/servizi-0.png"}) {
+     ...fluidImage
+   }
+   servizi1: file(relativePath: {eq: "servizi/servizi-1.png"}) {
+     ...fluidImage
+   }
+   servizi2: file(relativePath: {eq: "servizi/servizi-2.png"}) {
+     ...fluidImage
+   }
+ }
+`
