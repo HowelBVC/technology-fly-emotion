@@ -65,4 +65,13 @@
    .servizi-row {
       padding-top: 48px;
    }
+
+   .realizzazioni {
+      padding-top: 64px;
+      padding-bottom: 64px;
+   }
+
+   .realizzazioni-card {
+      margin-top: 48px;  
+   }
 }
