@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import ServizioWrapper from "../../../components/wrappers/Servizio.component";
+import SubpageWrapper from "../../../components/wrappers/Subpage.component";
 
 const Index = ({ data }) => (
-   <ServizioWrapper image={data.servizi2.childImageSharp} header="Progettazione integrata">
+   <SubpageWrapper image={data.servizi2.childImageSharp} header="Progettazione integrata">
       <p>
          l'Ingegneria con approccio a 360 gradi: direttamente e insieme ai nostri partners, affrontiamo tutti gli aspetti tecnici ed economici di un progetto, presentando soluzioni complete e all'avanguardia dal punto di vista dei prodotti finiti.
       </p>
@@ -15,7 +15,7 @@ const Index = ({ data }) => (
 
          Chiamaci per una valutazione dedicata.
       </p>
-   </ServizioWrapper>
+   </SubpageWrapper>
 );
 
 export default Index;

@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import ServizioWrapper from "../../../components/wrappers/Servizio.component";
+import SubpageWrapper from "../../../components/wrappers/Subpage.component";
 
 const Index = ({ data }) => (
-   <ServizioWrapper image={data.servizi1.childImageSharp} header="Studi di fattibilita'">
+   <SubpageWrapper image={data.servizi1.childImageSharp} header="Studi di fattibilita'">
       <p>
          Abbiamo esperienza decennale nella rapida ed efficace valutazione di possibili siti per nuove attrazioni, proponendo ogni volta il giusto mix di attrazioni per fare del tuo progetto un successo.
       </p>
@@ -16,7 +16,7 @@ const Index = ({ data }) => (
       <p>
          Chiamaci per una quotazione, sapremo adattare la nostra risposta alle tue esigenze.
       </p>
-   </ServizioWrapper>
+   </SubpageWrapper>
 );
 
 export default Index;

@@ -5,13 +5,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "../../button/Button.component";
 
 const dataRealizzazioni = [
-   { label: "Aerofune", text: "Parco avventura con diversi livelli di difficolta' in modo da permettere ad adulti e bambini di divertirsi e trascorrere una giornata nella natura: ponti tibetani, mini zipline, reti per arrampicarsi, un entusiasmante salto di tarzan e tanti altri giochi acrobatici ." },
-   { label: "Aerobosco", text: "Parco avventura con diversi livelli di difficolta' in modo da permettere ad adulti e bambini di divertirsi e trascorrere una giornata nella natura: ponti tibetani, mini zipline, reti per arrampicarsi, un entusiasmante salto di tarzan e tanti altri giochi acrobatici ." },
-   { label: "Rail Zip", text: "Rail Zip: unica nel suo genere, ma adatta a tutti. I volatori sono agganciati in sicurezza a un carrello che scorre lungo un binario posto ad un' altezza da 5 a 50 metri dal suolo, scendendo lungo un pendio in un percorso a pendenza elevata, ma a velocità attenuata dall'andamento a zig-zag." },
-   { label: "Altre Attrazioni", text: "A seconda delle esigenze, richieste del cliente e peculiarita' del territorio, siamo in grado di progettare attrazioni ad hoc." }
+   { label: "Aerofune", text: "La Zipline Aerofune permette di volare lungo due tratte, diverse per pendenza e lunghezza, da solo o in coppia. Grazie a una speciale imbracatura, si viene assicurati ad un carrello, che scorre liberamente lungo una fune d'acciaio, regalando momenti di pura emozione e panorami mozzafiato. All'arrivo uno speciale sistema frenante permette di rallentare in modo naturale e automatico.", path: "/realizzazioni/aerofune" },
+   { label: "Aerobosco", text: "Parco avventura con diversi livelli di difficolta' in modo da permettere ad adulti e bambini di divertirsi e trascorrere una giornata nella natura: ponti tibetani, mini zipline, reti per arrampicarsi, un entusiasmante salto di tarzan e tanti altri giochi acrobatici.", path: "/realizzazioni/aerobosco" },
+   { label: "Rail Zip", text: "Rail Zip: unica nel suo genere, ma adatta a tutti. I volatori sono agganciati in sicurezza a un carrello che scorre lungo un binario posto ad un' altezza da 5 a 50 metri dal suolo, scendendo lungo un pendio in un percorso a pendenza elevata, ma a velocità attenuata dall'andamento a zig-zag.", path: "realizzazioni/rail-zip" },
+   { label: "Altre Attrazioni", text: "A seconda delle esigenze, richieste del cliente e peculiarita' del territorio, siamo in grado di progettare attrazioni ad hoc.", path: "/realizzazioni/altre-attrazioni" }
 ]
 
-const Card = ({ label, text, image }) => (
+const Card = ({ label, text, path, image }) => (
    <Col className={`${styles.card}`}>
       <Row className="justify-content-between">
          {/* Text Area */}
@@ -25,7 +25,7 @@ const Card = ({ label, text, image }) => (
 
             {/* Button Container */}
             <div className="w-100 d-none d-md-flex justify-content-end">
-               <Button>Scopri di piu'</Button>
+               <Button path={path}>Scopri di piu'</Button>
             </div>
          </Col>
 

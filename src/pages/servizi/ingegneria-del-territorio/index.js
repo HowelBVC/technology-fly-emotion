@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import ServizioWrapper from "../../../components/wrappers/Servizio.component";
+import SubpageWrapper from "../../../components/wrappers/Subpage.component";
 
 const Index = ({ data }) => (
-   <ServizioWrapper image={data.servizi0.childImageSharp} header="Ingegneria del territorio">
+   <SubpageWrapper image={data.servizi0.childImageSharp} header="Ingegneria del territorio">
       <p>
          Come promuovere e rilanciare una destinazione, utilizzando prodotti e offerte innovative compatibili con l'ecosistema locale?
       </p>
@@ -14,7 +14,7 @@ const Index = ({ data }) => (
       <p>
          In questo quadro di sviluppo, Fly Emotion aiuta gli enti locali a pianificare il proprio territorio inserendo negli strumenti urbanistici soluzioni di intrattenimento e attrazione ragionate, sostenibili e appetibili per gli investitori.
       </p>
-   </ServizioWrapper>
+   </SubpageWrapper>
 );
 
 export default Index;

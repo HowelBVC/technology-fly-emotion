@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as styles from "./Servizio.module.css";
+import * as styles from "./Subpage.module.css";
 
 const Banner = ({ image, header, children }) => (
    <section className={styles.banner}>
@@ -36,6 +36,6 @@ const Banner = ({ image, header, children }) => (
    </section>
 );
 
-const ServizioWrapper = (props) => <Banner {...props} />
+const SubpageWrapper = (props) => <Banner {...props} />
 
-export default ServizioWrapper;
+export default SubpageWrapper;
