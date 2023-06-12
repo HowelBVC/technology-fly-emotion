@@ -1,0 +1,26 @@
+.banner-mobile {
+   background-color: #FFCE84;
+}
+
+.image {
+   width: 100%;
+   height: 262px;
+}
+
+.text-area {
+   padding-top: 16px;
+}
+
+@media (min-width: 768px) {
+   .banner {
+      background-color: #060527;
+      color: white;
+      padding-top: 48px;
+      padding-bottom: 48px;
+   }
+
+   .image {
+      max-width: 500px;
+      height: auto;
+   }
+}

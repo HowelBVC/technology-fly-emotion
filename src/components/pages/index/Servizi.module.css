@@ -12,6 +12,7 @@
    margin-top: 16px;
    border-radius: 15px;
    overflow: hidden;
+   cursor: pointer;
 }
 
 .card-inner {
