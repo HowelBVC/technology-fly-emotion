@@ -5,18 +5,16 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap";
 
 const cardData = [
-   { label: "Ingegneria del territorio", route: "/servizi/ingegneria-del-territorio" },
-   { label: "Studi di fattibilita'", route: "/servizi/studi-di-fattibilita" },
-   { label: "Progettazione integrata", route: "/servizi/progettazione-integrata" }
+   { label: "Ingegneria del territorio", path: "/servizi/ingegneria-del-territorio" },
+   { label: "Studi di fattibilita'", path: "/servizi/studi-di-fattibilita" },
+   { label: "Progettazione integrata", path: "/servizi/progettazione-integrata" }
 ]
 
-const Card = ({ label, route, index, image }) => {
-   const handleClick = (route) => {
-      navigate(route);
-   }
+const Card = ({ label, path, index, image }) => {
+   const handleClick = (path) => navigate(path);
 
    return (
-      <Col onClick={() => handleClick(route)} key={index} className={`${styles.card} mx-0 mx-md-2 my-2 my-md-0`}>
+      <Col onClick={() => handleClick(path)} key={index} className={`${styles.card} mx-0 mx-md-2 my-2 my-md-0`}>
          <Row className="flex-row flex-md-column">
             {/* Text Area */}
             <Col className={`${styles.cardInner} order-0 order-md-1`}>
