@@ -34,7 +34,7 @@ const Card = ({ label, path, index, image }) => {
 }
 
 const Servizi = ({ data }) => (
-   <section className={styles.servizi}>
+   <section className={styles.servizi} id="servizi">
       <Container className="text-start text-md-center">
          <h2>I Nostri Servizi</h2>
          <Row className={`${styles.serviziRow} flex-column flex-md-row px-2 px-md-0`}>

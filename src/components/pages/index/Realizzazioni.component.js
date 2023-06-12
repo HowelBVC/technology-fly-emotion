@@ -54,7 +54,7 @@ const Card = ({ label, text, path, image }) => {
 }
 
 const Realizzazioni = ({ data }) => (
-   <section className={styles.realizzazioni}>
+   <section className={styles.realizzazioni} id="realizzazioni">
       <Container className="text-start text-md-center">
          <h2>Realizzazioni</h2>
          <Row className="flex-column text-start px-2 px-md-0">

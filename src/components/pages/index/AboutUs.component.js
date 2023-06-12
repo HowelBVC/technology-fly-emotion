@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 
 export default function AboutUs() {
    return (
-      <section className={styles.aboutUs}>
+      <section className={styles.aboutUs} id="about-us">
          <Container>
             <h1>About Us</h1>
             <p>
