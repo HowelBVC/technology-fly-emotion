@@ -1,9 +1,14 @@
 .topbar {
    background-color: #060527;
    color: white;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1000;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
    color: white;
    text-decoration: none;
 }
@@ -16,10 +21,16 @@ a:hover {
    color: white;
 }
 
-.desktop {
-   height: 160px;
-}
-
 .mobile {
    height: 48px;
+}
+
+@media (min-width: 768px) {
+   .topbar {
+      position: initial;
+   }
+
+   .desktop {
+      height: 160px;
+   }
 }
