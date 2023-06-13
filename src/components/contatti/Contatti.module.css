@@ -1,0 +1,17 @@
+.card {
+   background-color: #060527;
+   color: white;
+   padding: 16px;
+}
+
+@media (min-width: 768px) {
+   .contatti {
+      padding-top: 64px;
+      padding-bottom: 64px;
+   }
+
+   .card {
+      padding: 64px !important;
+      border-radius: 15px;
+   }
+}
