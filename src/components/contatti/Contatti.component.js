@@ -21,7 +21,10 @@ const Contatti = () => (
                <Logo />
             </Col>
             <Header />
-            <h3 className="d-md-none">Technology Fly Emotion S.r.l. - A Socio Unico</h3>
+            <div className="d-md-none">
+               <h3>Technology Fly Emotion S.r.l. - A Socio Unico</h3>
+               <p>Societa' di Ingegneria</p>
+            </div>
             <p>Via Ceresola 164, Talamona (SO)</p>
             <p>tecnico@flyemotion.com</p>
             <p>+39 0342 613819</p>
