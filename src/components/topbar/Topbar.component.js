@@ -4,20 +4,20 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const navItems = [
    {
-      label: "Home",
-      data: "/",
+      label: "About Us",
+      data: "#about-us",
    },
    {
       label: "Servizi",
-      data: "/servizi",
+      data: "#servizi",
    },
    {
       label: "Realizzazioni",
-      data: "/realizzazioni",
+      data: "#realizzazioni",
    },
    {
       label: "Contatti",
-      data: "/contatti",
+      data: "#contatti",
    },
 ];
 
@@ -25,10 +25,10 @@ const HomeButton = () => <a className={styles.home} href="/">Technology Fly Emot
 
 const TopbarDesktop = () => {
    const NavItem = ({ label, data }) => (
-      <Col>
-         <h4>
+      <Col md="auto">
+         <p>
             <a href={`${data}`}>{label}</a>
-         </h4>
+         </p>
       </Col>
    )
 
@@ -40,7 +40,7 @@ const TopbarDesktop = () => {
                <Col lg="auto"><h4><HomeButton /></h4></Col>
 
                {/* Nav Area */}
-               <Col lg={6}>
+               <Col md="auto">
                   <Row>
                      {navItems.map((data, index) => <NavItem key={index} {...data} />)}
                   </Row>
