@@ -13,11 +13,11 @@ const dataRealizzazioni = [
 ]
 
 const Card = ({ label, text, path, image }) => {
-   const handleClick = (path) => navigate(path);
+   const handleClick = () => navigate(path);
 
    return (
       <Col className={`${styles.card}`}>
-         <div onClick={() => handleClick(path)} className={styles.clickable} />
+         <div onClick={handleClick} className={styles.clickable} />
          <Row className="justify-content-between">
             {/* Text Area */}
             <Col xs={6} md={5} className={styles.cardInner}>
@@ -30,7 +30,7 @@ const Card = ({ label, text, path, image }) => {
 
                {/* Button Container */}
                <div className="w-100 d-none d-md-flex justify-content-end">
-                  <Button path={path}>Scopri di piu'</Button>
+                  <Button onClick={handleClick}>Scopri di piu'</Button>
                </div>
             </Col>
 
