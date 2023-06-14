@@ -25,6 +25,21 @@ a:hover {
    height: 48px;
 }
 
+.burger {
+   width: 24px;
+   height: 24px;
+   margin-right: 16px;
+}
+
+.burger {
+   right: 0px;
+   position: absolute;
+}
+
+h4 {
+   margin-bottom: 0px !important;
+}
+
 @media (min-width: 768px) {
    .topbar {
       position: initial;

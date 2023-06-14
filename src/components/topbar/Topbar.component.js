@@ -1,19 +1,20 @@
 import React from "react";
 import * as styles from "./Topbar.module.css";
 import { Container, Row, Col } from "react-bootstrap";
+import BurgerIcon from "../../images/svg/burger.svg";
 
 const navItems = [
    {
       label: "About Us",
-      data: "#about-us",
+      data: "/#about-us",
    },
    {
       label: "Servizi",
-      data: "#servizi",
+      data: "/#servizi",
    },
    {
       label: "Realizzazioni",
-      data: "#realizzazioni",
+      data: "/#realizzazioni",
    },
    {
       label: "Contatti",
@@ -22,6 +23,12 @@ const navItems = [
 ];
 
 const HomeButton = () => <a className={styles.home} href="/">Technology Fly Emotion</a>
+
+const BurgerMenu = () => (
+   <div className={styles.burger}>
+      <BurgerIcon />
+   </div>
+);
 
 const TopbarDesktop = () => {
    const NavItem = ({ label, data }) => (
@@ -54,6 +61,7 @@ const TopbarDesktop = () => {
 const TopbarMobile = () => (
    <div className={`${styles.topbar} ${styles.mobile} align-items-center justify-content-center d-flex d-lg-none`}>
       <h4><HomeButton /></h4>
+      <BurgerMenu />
    </div>
 );
 
