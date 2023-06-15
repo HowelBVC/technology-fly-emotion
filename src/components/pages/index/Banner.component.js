@@ -20,7 +20,7 @@ const Banner = () => {
                      <div onClick={() => handleClick("#about-us")} className={styles.bannerButton}>
                         <p>About Us</p>
                      </div>
-                     <div className={`${styles.bannerButton} ${styles.highlighted}`}>
+                     <div onClick={() => handleClick("#contatti")} className={`${styles.bannerButton} ${styles.highlighted}`}>
                         <p>Contattaci</p>
                      </div>
                   </div>
