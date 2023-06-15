@@ -1,9 +1,26 @@
 import React from "react";
+import { navigate } from "gatsby";
 import * as styles from "./Topbar.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import BurgerIcon from "../../images/svg/burger.svg";
+import Logo from "../../images/svg/logo_bianco.svg";
 
-const HomeButton = () => <a className={styles.home} href="/">Technology Fly Emotion</a>
+const HomeButton = () => {
+   const handleClick = () => navigate("/");
+
+   return (
+      <Col onClick={handleClick} md="auto" className={styles.homeButton}>
+         <Row>
+            <Col className={styles.logo} md="auto">
+               <Logo />
+            </Col>
+            <Col md="auto" className="d-flex align-items-center" >
+               <h4>Technology Fly Emotion</h4>
+            </Col>
+         </Row>
+      </Col>
+   );
+}
 
 const BurgerMenu = ({ onClickBurger }) => (
    <div onClick={onClickBurger} className={styles.burger}>
@@ -25,7 +42,7 @@ const TopbarDesktop = ({ navItems }) => {
          <Container>
             <Row className="justify-content-between align-items-center">
                {/* Logo Area */}
-               <Col lg="auto"><h4><HomeButton /></h4></Col>
+               <HomeButton />
 
                {/* Nav Area */}
                <Col md="auto">
@@ -41,7 +58,7 @@ const TopbarDesktop = ({ navItems }) => {
 
 const TopbarMobile = ({ onClickBurger }) => (
    <div className={`${styles.topbar} ${styles.mobile} align-items-center justify-content-center d-flex d-lg-none`}>
-      <h4><HomeButton /></h4>
+      {/* <HomeButton /> */}
       <BurgerMenu onClickBurger={onClickBurger} />
    </div>
 );
