@@ -56,12 +56,16 @@ const TopbarDesktop = ({ navItems }) => {
    )
 }
 
-const TopbarMobile = ({ onClickBurger }) => (
-   <div className={`${styles.topbar} ${styles.mobile} align-items-center justify-content-center d-flex d-lg-none`}>
-      {/* <HomeButton /> */}
-      <BurgerMenu onClickBurger={onClickBurger} />
-   </div>
-);
+const TopbarMobile = ({ onClickBurger }) => {
+   const handleClick = () => navigate("/");
+
+   return (
+      <div className={`${styles.topbar} ${styles.mobile} align-items-center justify-content-center d-flex d-lg-none`}>
+         <h4 onClick={handleClick}>Technology Fly Emotion</h4>
+         <BurgerMenu onClickBurger={onClickBurger} />
+      </div>
+   );
+}
 
 export default function Topbar({ navItems, onClickBurger }) {
    return (
