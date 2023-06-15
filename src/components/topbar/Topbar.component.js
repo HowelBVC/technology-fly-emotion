@@ -3,34 +3,15 @@ import * as styles from "./Topbar.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import BurgerIcon from "../../images/svg/burger.svg";
 
-const navItems = [
-   {
-      label: "About Us",
-      data: "/#about-us",
-   },
-   {
-      label: "Servizi",
-      data: "/#servizi",
-   },
-   {
-      label: "Realizzazioni",
-      data: "/#realizzazioni",
-   },
-   {
-      label: "Contatti",
-      data: "#contatti",
-   },
-];
-
 const HomeButton = () => <a className={styles.home} href="/">Technology Fly Emotion</a>
 
-const BurgerMenu = () => (
-   <div className={styles.burger}>
+const BurgerMenu = ({ onClickBurger }) => (
+   <div onClick={onClickBurger} className={styles.burger}>
       <BurgerIcon />
    </div>
 );
 
-const TopbarDesktop = () => {
+const TopbarDesktop = ({ navItems }) => {
    const NavItem = ({ label, data }) => (
       <Col md="auto">
          <p>
@@ -58,18 +39,18 @@ const TopbarDesktop = () => {
    )
 }
 
-const TopbarMobile = () => (
+const TopbarMobile = ({ onClickBurger }) => (
    <div className={`${styles.topbar} ${styles.mobile} align-items-center justify-content-center d-flex d-lg-none`}>
       <h4><HomeButton /></h4>
-      <BurgerMenu />
+      <BurgerMenu onClickBurger={onClickBurger} />
    </div>
 );
 
-export default function Topbar() {
+export default function Topbar({ navItems, onClickBurger }) {
    return (
       <React.Fragment>
-         <TopbarDesktop />
-         <TopbarMobile />
+         <TopbarDesktop navItems={navItems} />
+         <TopbarMobile onClickBurger={onClickBurger} />
       </React.Fragment>
    )
 }
