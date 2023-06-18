@@ -5,16 +5,16 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap";
 
 const cardData = [
-   { label: "Ingegneria del territorio", path: "/servizi/ingegneria-del-territorio" },
-   { label: "Studi di fattibilita'", path: "/servizi/studi-di-fattibilita" },
-   { label: "Progettazione integrata", path: "/servizi/progettazione-integrata" }
+   { id: "ingegneria", label: "Ingegneria del territorio", path: "/servizi/ingegneria-del-territorio" },
+   { id: "studi", label: "Studi di fattibilita'", path: "/servizi/studi-di-fattibilita" },
+   { id: "progettazione", label: "Progettazione integrata", path: "/servizi/progettazione-integrata" }
 ]
 
-const Card = ({ label, path, index, image }) => {
+const Card = ({ label, path, image }) => {
    const handleClick = (path) => navigate(path);
 
    return (
-      <Col onClick={() => handleClick(path)} key={index} className={`${styles.card} mx-0 mx-md-2 my-2 my-md-0`}>
+      <Col onClick={() => handleClick(path)} className={`${styles.card} mx-0 mx-md-2 my-2 my-md-0`}>
          <Row className="flex-row flex-md-column">
             {/* Text Area */}
             <Col className={`${styles.cardInner} order-0 order-md-1`}>
@@ -40,8 +40,7 @@ const Servizi = ({ data }) => (
          <Row className={`${styles.serviziRow} flex-column flex-md-row px-2 px-md-0`}>
             {cardData.map((item, index) => <Card
                key={index}
-               index={index}
-               image={getImage(data[`servizi${index}`].childImageSharp)}
+               image={getImage(data[item.id].childImageSharp)}
                {...item}
             />)}
          </Row>

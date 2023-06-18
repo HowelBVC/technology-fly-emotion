@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import SubpageWrapper from "../../../components/wrappers/Subpage.component";
 
 const Index = ({ data }) => (
-   <SubpageWrapper image={data.servizi0.childImageSharp} header="Ingegneria del territorio">
+   <SubpageWrapper image={data.ingegneria.childImageSharp} header="Ingegneria del territorio">
       <p>
          Come promuovere e rilanciare una destinazione, utilizzando prodotti e offerte innovative compatibili con l'ecosistema locale?
       </p>
@@ -29,7 +29,7 @@ fragment fluidImage on File {
 
 export const pageQuery = graphql`
 query {
-   servizi0: file(relativePath: {eq: "servizi/servizi-0.png"}) {
+   ingegneria: file(relativePath: {eq: "servizi/ingegneria-del-territorio.png"}) {
      ...fluidImage
    }
  }

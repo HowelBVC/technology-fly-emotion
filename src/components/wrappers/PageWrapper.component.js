@@ -25,7 +25,7 @@ const SideMenuMobile = ({ navItems, onClick, isSideMenuActive }) => (
             <h2 style={{ display: "inline" }}>x</h2>
          </Col>
       </Row>
-      {navItems.map((item, index) => <NavItem onClick={onClick} {...item} />)}
+      {navItems.map((item, index) => <NavItem key={index} onClick={onClick} {...item} />)}
    </div>
 );
 

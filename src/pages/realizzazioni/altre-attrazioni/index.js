@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import SubpageWrapper from "../../../components/wrappers/Subpage.component";
 
 const Index = ({ data }) => (
-   <SubpageWrapper image={data.realizzazioni3.childImageSharp} header="Altre Attrazioni">
+   <SubpageWrapper image={data.altre.childImageSharp} header="Altre Attrazioni">
       <p>
          A seconda delle esigenze, richieste del cliente e peculiarita' del territorio, siamo in grado di progettare attrazioni ad hoc.
       </p>
@@ -25,7 +25,7 @@ fragment fluidImage on File {
 
 export const pageQuery = graphql`
 query {
-   realizzazioni3: file(relativePath: {eq: "realizzazioni/realizzazioni-3.png"}) {
+   altre: file(relativePath: {eq: "realizzazioni/altre.png"}) {
      ...fluidImage
    }
  }
