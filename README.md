@@ -4,6 +4,5 @@
 
 **Latest release**
 
-    ```shell
     https://github.com/HowelBVC/technology-fly-emotion/releases/tag/v1.0.0
-    ```
+    
