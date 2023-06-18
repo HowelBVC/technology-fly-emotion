@@ -26,25 +26,25 @@ fragment fluidImage on File {
 
 export const pageQuery = graphql`
 query {
-   servizi0: file(relativePath: {eq: "servizi/servizi-0.png"}) {
+   ingegneria: file(relativePath: {eq: "servizi/ingegneria-del-territorio.png"}) {
      ...fluidImage
    }
-   servizi1: file(relativePath: {eq: "servizi/servizi-1.png"}) {
+   studi: file(relativePath: {eq: "servizi/studi-di-fattibilita.png"}) {
      ...fluidImage
    }
-   servizi2: file(relativePath: {eq: "servizi/servizi-2.png"}) {
+   progettazione: file(relativePath: {eq: "servizi/progettazione-integrata.png"}) {
      ...fluidImage
    }
-   realizzazioni0: file(relativePath: {eq: "realizzazioni/realizzazioni-0.png"}) {
+   aerofune: file(relativePath: {eq: "realizzazioni/aerofune.png"}) {
     ...fluidImage
    }
-   realizzazioni1: file(relativePath: {eq: "realizzazioni/realizzazioni-1.png"}) {
+   aerobosco: file(relativePath: {eq: "realizzazioni/aerobosco.png"}) {
     ...fluidImage
    }
-   realizzazioni2: file(relativePath: {eq: "realizzazioni/realizzazioni-2.png"}) {
+   railzip: file(relativePath: {eq: "realizzazioni/railzip.png"}) {
     ...fluidImage
    }
-   realizzazioni3: file(relativePath: {eq: "realizzazioni/realizzazioni-3.png"}) {
+   altre: file(relativePath: {eq: "realizzazioni/altre.png"}) {
     ...fluidImage
    }
  }

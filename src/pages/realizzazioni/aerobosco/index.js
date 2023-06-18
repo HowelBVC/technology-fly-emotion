@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import SubpageWrapper from "../../../components/wrappers/Subpage.component";
 
 const Index = ({ data }) => (
-   <SubpageWrapper image={data.realizzazioni1.childImageSharp} header="Aerobosco">
+   <SubpageWrapper image={data.aerobosco.childImageSharp} header="Aerobosco">
       <p>
          Parco avventura con diversi livelli di difficolta' in modo da permettere ad adulti e bambini di divertirsi e trascorrere una giornata nella natura: ponti tibetani, mini zipline, reti per arrampicarsi, un entusiasmante salto di tarzan e tanti altri giochi acrobatici.
       </p>
@@ -25,7 +25,7 @@ fragment fluidImage on File {
 
 export const pageQuery = graphql`
 query {
-   realizzazioni1: file(relativePath: {eq: "realizzazioni/realizzazioni-1.png"}) {
+   aerobosco: file(relativePath: {eq: "realizzazioni/aerobosco.png"}) {
      ...fluidImage
    }
  }
